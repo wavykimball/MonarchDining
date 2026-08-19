@@ -10,7 +10,7 @@ interface HeroProps {
 
 export function Hero({ isDark, onExplore, onCart }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 pt-32 pb-20 transition-colors duration-300
+    <section className="relative z-10 min-h-screen flex flex-col items-center justify-center overflow-hidden px-5 pt-32 pb-20 transition-colors duration-300
       bg-white dark:bg-[#050505]">
 
       <div className="flex flex-col items-center text-center z-10 w-full max-w-3xl">
@@ -25,7 +25,7 @@ export function Hero({ isDark, onExplore, onCart }: HeroProps) {
         <h2
           className="text-[clamp(2.4rem,8vw,5rem)] leading-none uppercase mt-1 transition-colors duration-300
             text-black dark:text-white"
-          style={{ ...CD, fontWeight: 700 }}
+          style={{ ...CD, fontWeight: 500 }}
         >
           Food Menu
         </h2>
