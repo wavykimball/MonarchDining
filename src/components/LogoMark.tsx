@@ -4,7 +4,7 @@ interface LogoMarkProps {
 
 export function LogoMark({ isDark }: LogoMarkProps) {
   return (
-    <svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto text-black">
+    <svg width="142" height="32" viewBox="0 0 142 32" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-7 w-auto text-white dark:text-black">
       <g clipPath="url(#clip0_485_9548)">
         <path fillRule="evenodd" clipRule="evenodd" d="M12.3604 31.3108C18.551 31.3108 23.5695 26.2923 23.5695 20.1017C23.5695 13.9112 18.551 8.8927 12.3604 8.8927C6.16984 8.8927 1.15137 13.9112 1.15137 20.1017C1.15137 26.2923 6.16984 31.3108 12.3604 31.3108Z" stroke="currentColor" strokeWidth="0.574126" strokeMiterlimit="22.9256"/>
         <path fillRule="evenodd" clipRule="evenodd" d="M13.223 16.4852L13.2436 16.912L13.5719 16.8094C17.1036 15.7051 17.1832 25.1626 11.1772 23.396C10.7005 23.2559 10.1816 22.9614 10.1816 22.9614C10.1816 22.9614 10.527 23.3938 10.8967 23.6064C14.2363 25.5264 17.4327 23.616 17.8516 20.7599C18.0059 19.7083 17.8517 18.9651 17.6694 18.4322C17.1351 16.8704 15.041 15.9988 13.5115 16.3912C13.4552 16.4057 13.2738 16.4664 13.223 16.4852Z" fill="currentColor" stroke="currentColor" strokeWidth="0.0478497" strokeMiterlimit="22.9256"/>
