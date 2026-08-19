@@ -25,10 +25,10 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-30 flex justify-center px-3 pt-3 sm:px-5 sm:pt-5">
+    <header className="fixed top-0 inset-x-0 z-30 flex justify-center px-3 pt-3 pb-3 sm:px-5 sm:pt-5 sm:pb-3 bg-white dark:bg-black transition-colors duration-300">
       {/* Pill */}
-      <nav className="border border-[#ff572d] rounded-full w-full max-w-[1080px] h-14 sm:h-16 flex items-center justify-between px-4 sm:px-6 transition-colors duration-300
-        bg-white dark:bg-[#0d0d0d]">
+      <nav className="border border-black dark:border-white rounded-full w-full max-w-[1080px] h-14 sm:h-16 flex items-center justify-between px-4 sm:px-6 transition-colors duration-300
+        bg-black dark:bg-white">
         
         {/* Desktop Brand Logo */}
         <button
@@ -51,7 +51,7 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             viewBox="0 0 24 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-auto text-black dark:text-white"
+            className="h-7 w-auto text-white dark:text-black"
           >
             <g clipPath="url(#clip0_485_9601)">
               <path
@@ -113,7 +113,7 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             <button
               key={cat.id}
               onClick={() => scrollTo(cat.id)}
-              className="text-[#555] dark:text-[#a3a3a3] text-[13px] hover:text-[#ff572d] dark:hover:text-[#ff572d] transition-colors uppercase"
+              className="text-white dark:text-[#030712] text-[13px] hover:text-[#ff572d] transition-colors uppercase"
               style={{ ...CD, fontWeight: 500 }}
             >
               {cat.label}
@@ -141,27 +141,25 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
           {/* Theme switcher — desktop view only */}
           <button
             onClick={onToggleDark}
-            className="hidden md:flex items-center justify-center h-10 px-4 rounded-full transition-colors
-              bg-[#030712] dark:bg-[#faf4ec]
-              hover:opacity-80"
+            className="hidden md:flex items-center justify-center h-10 px-4 rounded-full transition-colors bg-white dark:bg-[#030712] hover:opacity-80"
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             title={isDark ? "Light mode" : "Dark mode"}
           >
             {isDark
-              ? <Sun size={16} className="text-[#030712]" />
-              : <Moon size={16} className="text-[#faf4ec]" />
+              ? <Sun size={16} className="text-[#faf4ec]" />
+              : <Moon size={16} className="text-black" />
             }
           </button>
 
           {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen((v) => !v)}
-            className="md:hidden p-2 hover:bg-gray-100 dark:hover:bg-[#222] rounded-full transition-colors"
+            className="md:hidden p-2 hover:bg-gray-100 rounded-full transition-colors"
             aria-label="Toggle menu"
           >
             {mobileOpen
-              ? <X size={18} className="text-gray-700 dark:text-[#faf4ec]" />
-              : <AlignJustify size={18} className="text-gray-700 dark:text-[#faf4ec]" />
+              ? <X size={18} className="text-white dark:text-[#030712]" />
+              : <AlignJustify size={18} className="text-white dark:text-[#030712]" />
             }
           </button>
         </div>
