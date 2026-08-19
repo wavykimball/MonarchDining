@@ -1,0 +1,86 @@
+import { Category } from "@/types";
+
+export const CATEGORIES: readonly Category[] = [
+  {
+    id: "mains", label: "Mains", heading: "Rice, Pasta & More",
+    items: [
+      { id: "coconut-rice", name: "Coconut Rice", description: "Coconut milk featuring tender shrimp, earthy liver, fluffy basmati rice and unique dried fish, this dish is a perfect blend of texture and taste.", price: "₦6,500" },
+      { id: "spicy-beef-penne", name: "Spicy Beef Penne Pasta", description: "Bringing together the hearty flavors of beef with the satisfying texture of penne pasta. Incorporating chili flakes and garlic to create a robust flavor profile.", price: "₦8,000" },
+      { id: "smokey-jollof", name: "Smokey Jollof Rice", description: "This iconic West African dish is renowned for its bold flavors and vibrant color. Cooked in a rich, spiced roasted tomato sauce and firewood that gives it a distinctive smoky taste.", price: "₦5,500" },
+      { id: "special-fried-rice", name: "Special Fried Rice", description: "Basmati rice, mixed vegetables, eggs, shrimps, chicken, oyster sauce, soy sauce pre-cooked and stir-fried at high heat, fully absorbing the flavors of the sauces and seasonings.", price: "₦7,500" },
+      { id: "waakye", name: "Waakye (Rice & Beans)", description: "Ghanaian staple of rice and beans simmered with traditional leaves, creating a distinctive aroma and depth of flavor. Hearty, comforting, and richly satisfying.", price: "₦7,000" },
+      { id: "suya-pasta", name: "Suya Pasta", description: "Intense heat and nutty flavor coats the pasta, while the grilled suya meat adds a smoky richness — a satisfying meal that showcases the beauty of culinary fusion.", price: "₦7,500" },
+      { id: "alfredo-pasta", name: "Alfredo Pasta", description: "The creamy Italian classic with rich and indulgent sauce. With cream and butter creating a luxurious texture.", price: "₦16,500" },
+      { id: "seafood-pasta", name: "Seafood Pasta", description: "Sautéed with garlic and olive oil, tossed with al dente pasta, finished with white wine. Garnished with fresh herbs, shrimps, prawns, mussels and calamari.", price: "₦19,500" },
+      { id: "asaro", name: "Asaro (Yam & Potato Pottage)", description: "Creamy yam & potato pottage with assorted proteins. Infused with spices and vibrant vegetables.", price: "₦7,000" },
+      { id: "asun-jollof", name: "Asun Jollof Rice", description: "A spicy twist on the traditional Jollof rice, featuring succulent pieces of grilled goat meat. The smoky flavor enhances the rice and gives a satisfying asun flavour.", price: "₦8,500" },
+      { id: "chinese-rice", name: "Chinese Rice", description: "Stir-fried rice with vegetables and seasoned with soy sauce. A versatile staple in Chinese cuisine.", price: "₦9,500" },
+      { id: "dirty-rice", name: "Dirty Rice", description: "Originating from Louisiana, hearty and flavorful. The mix of spices and vegetables creates a rich, aromatic experience.", price: "₦7,500" },
+      { id: "singapore-noodles", name: "Singapore Noodles", description: "Stir-fried rice vermicelli with a vibrant yellow curry powder. Combination of proteins and crunchy vegetables giving a delightful contrast.", price: "₦8,500" },
+      { id: "native-rice", name: "Native Rice", description: "A fluffy, aromatic texture making it the perfect accompaniment to our rich palm oil sauce mixed with dried fish, cow skin and tripe.", price: "₦8,000" },
+      { id: "jambalaya-rice", name: "Jambalaya Rice", description: "A culinary melting pot of Louisiana, absorbing all the flavors from the spices and meats to create a hearty, colorful and satisfying meal.", price: "₦8,500" },
+      { id: "shrimp-noodles", name: "Shrimp Noodles", description: "Succulent shrimp stir-fried with vibrant vegetables and tossed with noodles, all seasoned to perfection.", price: "₦4,500" },
+    ],
+  },
+  {
+    id: "combos", label: "Combos", heading: "Monarch's Specials Combos",
+    items: [
+      { id: "coconut-shitto", name: "Coconut Rice & Shitto", description: "Aromatic Coconut Rice paired with our intense, spicy Ghanaian Shitto sauce loaded with diced deep-fried beef.", price: "₦10,000" },
+      { id: "waakye-talia", name: "Waakye & Talia (Spaghetti) Shitto", description: "Classic Rice and Beans (Waakye) combined with spaghetti (Talia), served with a rich, savory Shitto sauce.", price: "₦10,000" },
+      { id: "pottage-shitto", name: "Potato/Yam Pottage with Assorted & Shitto", description: "Hearty potato and yam pottage with assorted meats, accompanied by side Shitto sauce to enhance depth and heat.", price: "₦10,000" },
+      { id: "suya-rice-shitto", name: "Monarch's Suya Rice Shitto", description: "Fragrant Suya-flavored rice served with a robust, spicy side of Ghanaian Shitto sauce.", price: "₦10,000" },
+    ],
+  },
+  {
+    id: "pepper-soup", label: "Pepper-Soup", heading: "Pepper Soup",
+    items: [
+      { id: "chicken-pepper-soup", name: "Chicken Pepper Soup", description: "A light but fiery broth filled with tender chicken pieces and aromatic native herbs. Comforting and medicinal.", price: "₦3,500" },
+      { id: "goat-pepper-soup", name: "Goat Meat Pepper Soup", description: "A local favorite. Succulent, skin-on goat meat simmered in our signature hot pepper broth. Rich, bold flavor.", price: "₦5,000" },
+      { id: "fried-cow-pepper", name: "Fried Cow Meat", description: "Hearty chunks of beef in a richly spiced pepper soup broth. Satisfyingly spicy.", price: "₦2,000" },
+      { id: "catfish-pepper-soup", name: "Catfish Pepper Soup", description: "Freshly caught catfish cooked gently in a spicy, aromatic broth, retaining its tender texture. Commonly referred to as 'Point & Kill'.", price: "₦6,000" },
+      { id: "plantain-cowtail", name: "Plantain & Cow-Tail", description: "Slow-simmered, tender cow-tail paired with sweet boiled plantain, cooked in a hot spice broth. The ultimate gourmet comfort soup.", price: "₦10,500" },
+    ],
+  },
+  {
+    id: "proteins", label: "Proteins", heading: "Protein",
+    items: [
+      { id: "fried-ram", name: "Fried Ram Meat", description: "Tender, deeply seasoned fried ram meat with a rich gamey finish.", price: "₦3,500" },
+      { id: "fried-goat", name: "Fried Goat Meat", description: "Crispy and savory bite-sized pieces of fried seasoned goat meat.", price: "₦3,000" },
+      { id: "fried-cow", name: "Fried Cow Meat", description: "Classic seasoned fried beef cubes, perfect with Jollof or fried rice.", price: "₦2,000" },
+      { id: "spicy-chicken", name: "Spicy Chicken", description: "Juicy chicken portions coated in a spicy, peppery local marinade.", price: "₦5,500" },
+      { id: "peppered-snails", name: "Peppered Snails", description: "Large, chewy snails tossed in a fiery, sweet pepper sauce. A premium delicacy.", price: "₦6,000" },
+      { id: "peppered-gizzard", name: "Peppered Gizzard", description: "Crunchy gizzard pieces thoroughly coated in a spicy pepper sauce.", price: "₦3,000" },
+      { id: "croaker-fish", name: "Grilled/Fried Croaker Fish", description: "Whole croaker fish, deeply seasoned and fried or grilled. Crispy skin and tender flesh.", price: "₦5,000" },
+      { id: "peppered-kpomo", name: "Peppered Kpomo", description: "Chewy cow hide (Kpomo) cut into small cubes and stir-fried in a rich pepper sauce.", price: "₦1,000" },
+      { id: "spicy-turkey", name: "Spicy Turkey", description: "Rich and meaty turkey parts, fried and tossed in a savory hot pepper glaze.", price: "₦6,500" },
+      { id: "grilled-turkey", name: "Grilled/Fried Turkey", description: "Plain seasoned grilled or fried turkey, highlighting its natural rich taste.", price: "₦6,000" },
+      { id: "prawns", name: "Prawns", description: "Plump, juicy prawns sautéed with herbs and garlic butter.", price: "₦7,000" },
+      { id: "boiled-egg", name: "Boiled Egg", description: "A simple hard-boiled egg, ideal for pairing with Waakye or Rice.", price: "₦500" },
+    ],
+  },
+  {
+    id: "sides", label: "Sides", heading: "Sides",
+    items: [
+      { id: "coleslaw", name: "Coleslaw", description: "Creamy, crisp shredded cabbage and carrots. Served chilled.", price: "₦1,500" },
+      { id: "fried-plantain", name: "Fried Plantain", description: "Sweet, caramelized fried ripe plantain slices (Dodo).", price: "₦1,500" },
+      { id: "steamed-rice", name: "Steamed Basmati White Rice", description: "Fluffy, long-grain steamed Basmati white rice.", price: "₦2,500" },
+      { id: "fries", name: "Fries (Yam, Irish & Sweet Potato)", description: "A trio of freshly fried root vegetable fries — Yam fries, Irish potato, and Sweet potato fries.", price: "₦2,500" },
+      { id: "bbq-drumsticks", name: "Barbecue Drumsticks", description: "Tender chicken drumsticks glazed in a sweet, smoky BBQ sauce.", price: "₦8,000" },
+      { id: "chicken-salad", name: "Chicken Salad", description: "Fresh garden salad topped with grilled chicken breast and creamy dressing.", price: "₦5,500" },
+      { id: "caesar-salad", name: "Caesar Salad", description: "Crisp romaine lettuce tossed in Caesar dressing, croutons, and parmesan shavings.", price: "₦6,500" },
+      { id: "beef-plantain", name: "Beef Stuffed Plantain", description: "Baked sweet plantain split and stuffed with savory, spiced minced beef.", price: "₦4,000" },
+      { id: "honey-wings", name: "5pcs Honey Glazed Wings", description: "Five crispy chicken wings tossed in a sweet, sticky honey glaze.", price: "₦8,000" },
+    ],
+  },
+  {
+    id: "sauces", label: "Sauces", heading: "Dipping Sauces",
+    items: [
+      { id: "shitto", name: "Shitto", description: "A signature Ghanaian chili sauce — smoky, spicy, and richly seasoned with diced deep fried beef. Adds depth and heat to your meal.", price: "₦3,000" },
+      { id: "tartar", name: "Tartar Sauce", description: "A must-have accompaniment for seafood lovers. Crafted with creamy mayonnaise, finely chopped pickles, capers, and a hint of lemon juice.", price: "₦2,000" },
+      { id: "garlic-mayo", name: "Spicy Garlic Mayo Dip", description: "A bold and flavorful accompaniment that enhances any dish. Combines smooth mayonnaise with roasted garlic for depth.", price: "₦2,000" },
+      { id: "boom-boom", name: "Boom Boom Sauce", description: "A bold and zesty blend with a tantalizing mix of mayonnaise, Sriracha, garlic, and lime juice. Ignites your taste buds.", price: "₦3,000" },
+      { id: "palm-oil", name: "Palm Oil Sauce", description: "Traditional savory local palm oil condiment, rich in depth.", price: "₦1,000" },
+      { id: "peppered-sauce", name: "Peppered Sauce", description: "Spicy pepper sauce. Complimentary with any orders of Fries.", price: "Free" },
+    ],
+  },
+] as const;
