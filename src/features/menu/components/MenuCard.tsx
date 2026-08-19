@@ -25,7 +25,7 @@ export function MenuCard({ item, onAdd }: MenuCardProps) {
         </span>
       </div>
 
-      {/* Cream body — unchanged in both modes (matches the Figma design) */}
+      {/* Cream body — unchanged in both modes (matches the mockup design) */}
       <div className="bg-[#faf4ec] flex flex-col px-3 pt-3 pb-3 gap-3 flex-1">
         <p className="text-black text-[13px] leading-relaxed flex-1" style={{ ...CD, fontWeight: 400 }}>
           {item.description}

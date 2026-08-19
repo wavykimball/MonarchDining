@@ -1,11 +1,9 @@
+# Monarch Dining
 
-  # Monarch Dining
+This is the codebase for the Monarch Dining food menu web application, built with React, TypeScript, and Vite.
 
-  This is a code bundle for Monarch Dining. The original project is available at https://www.figma.com/design/I1biXGWdkTA8gtDTLPIM9l/Monarch-Dining.
+## Running the code
 
-  ## Running the code
-
-  Run `npm i` to install the dependencies.
-
-  Run `npm run dev` to start the development server.
-  
+1. Run `npm install` to install the dependencies.
+2. Run `npm run dev` to start the local development server.
+3. Run `npm run build` to build the production package.

@@ -3,15 +3,29 @@ import imgMotorbike1 from "@/imports/Desktop2/e195e67e394b1f013bc3ac0c53a003cc1f
 
 export function DeliveryBanner() {
   return (
-    <div className="w-full bg-[#F37A1F] py-6 px-5">
-      <div className="max-w-4xl mx-auto flex items-center justify-center gap-8">
-        <div>
-          <p className="text-white text-2xl sm:text-3xl leading-snug" style={{ ...CD, fontWeight: 600 }}>We also sell in liters</p>
-          <p className="text-white text-2xl sm:text-3xl" style={{ ...CD, fontWeight: 600 }}>(2l, 5l &amp; 10l)</p>
+    <div className="w-full h-[190px] bg-[#FF572D] flex items-center justify-center transition-colors duration-300">
+      {/* Banner Content */}
+      <div className="w-full max-w-[1440px] mx-auto px-6 flex items-center justify-center gap-10 sm:gap-16">
+        {/* Left Side: Liter Information */}
+        <div className="text-center text-white">
+          <p className="text-[20px] sm:text-[26px] md:text-[30px] font-bold leading-tight" style={{ ...CD, fontWeight: 700 }}>
+            We also sell in liters
+          </p>
+          <p className="text-[20px] sm:text-[26px] md:text-[30px] font-bold leading-tight mt-1" style={{ ...CD, fontWeight: 700 }}>
+            (2L, 5L &amp; 10L)
+          </p>
         </div>
-        <div className="flex flex-col items-center shrink-0">
-          <p className="text-white text-[9px] font-semibold text-center leading-tight mb-1" style={CD}>45 MINUTES<br />DELIVERY</p>
-          <img src={imgMotorbike1} alt="Delivery motorbike" className="w-12 h-10 object-contain" />
+
+        {/* Right Side: Delivery Indicator */}
+        <div className="flex flex-col items-center gap-1.5 shrink-0 text-white">
+          <img
+            src={imgMotorbike1}
+            alt="Delivery motorbike"
+            className="w-12 h-10 object-contain brightness-0 invert"
+          />
+          <p className="text-[9px] font-bold text-center leading-tight tracking-wider" style={{ ...CD, fontWeight: 700 }}>
+            45 MINUTES<br />DELIVERY
+          </p>
         </div>
       </div>
     </div>

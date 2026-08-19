@@ -32,7 +32,7 @@ export default function App() {
     <div className={isDark ? "dark" : ""}>
       <div className="min-h-screen relative overflow-x-hidden transition-colors duration-300 bg-white dark:bg-[#050505]">
         {/* Floating food illustration backgrounds repeated uniformly down the page */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-10">
+        <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
           {Array.from({ length: 10 }).map((_, i) => {
             const top = 250 + i * 600;
             const isLeft = i % 2 === 0;
@@ -81,7 +81,7 @@ export default function App() {
           onCart={() => setCartOpen(true)}
         />
 
-        <main className="max-w-[1082px] mx-auto px-4 sm:px-6 pb-20 flex flex-col gap-16 sm:gap-20">
+        <main className="relative z-10 max-w-[1082px] mx-auto px-4 sm:px-6 pb-20 flex flex-col gap-16 sm:gap-20">
           {CATEGORIES.map((cat) => (
             <MenuSection key={cat.id} category={cat} onAdd={handleAdd} />
           ))}
