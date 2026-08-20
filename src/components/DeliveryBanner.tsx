@@ -8,10 +8,10 @@ export function DeliveryBanner() {
       <div className="w-full max-w-[1440px] mx-auto px-6 flex items-center justify-center gap-10 sm:gap-16">
         {/* Left Side: Liter Information */}
         <div className="text-center text-white">
-          <p className="text-[20px] sm:text-[26px] md:text-[30px] font-bold leading-tight" style={{ ...CD, fontWeight: 700 }}>
+          <p className="text-[20px] sm:text-[26px] md:text-[30px] leading-tight" style={{ ...CD, fontWeight: 600 }}>
             We also sell in liters
           </p>
-          <p className="text-[20px] sm:text-[26px] md:text-[30px] font-bold leading-tight mt-1" style={{ ...CD, fontWeight: 700 }}>
+          <p className="text-[20px] sm:text-[26px] md:text-[30px] leading-tight mt-1" style={{ ...CD, fontWeight: 600 }}>
             (2L, 5L &amp; 10L)
           </p>
         </div>

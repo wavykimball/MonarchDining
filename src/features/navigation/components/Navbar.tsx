@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { X, ShoppingCart, AlignJustify, Sun, Moon } from "lucide-react";
+import { useState, useEffect } from "react";
+import { X, ShoppingCart, List, Sun, Moon } from "@phosphor-icons/react";
 import { CD } from "@/constants/styles";
 import { LogoMark } from "@/components/LogoMark";
 import { CATEGORIES } from "@/constants/menuData";
@@ -13,6 +13,22 @@ interface NavbarProps {
 
 export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarProps) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const mainEl = document.querySelector("main");
+      if (mainEl) {
+        const mainTop = mainEl.getBoundingClientRect().top;
+        setScrolled(mainTop <= 100);
+      } else {
+        setScrolled(window.scrollY > 500);
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -25,10 +41,11 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-30 flex justify-center px-3 pt-3 pb-3 sm:px-5 sm:pt-5 sm:pb-3 bg-white dark:bg-black transition-colors duration-300">
+    <header className={`fixed top-0 inset-x-0 z-30 flex justify-center px-3 pt-3 pb-3 sm:px-5 sm:pt-5 sm:pb-3 transition-all duration-300${scrolled ? (isDark ? " bg-black" : " bg-white") : ""}`}>
       {/* Pill */}
-      <nav className="border border-black dark:border-white rounded-full w-full max-w-[1080px] h-14 sm:h-16 flex items-center justify-between px-4 sm:px-6 transition-colors duration-300
-        bg-black dark:bg-white">
+      <nav
+        className={`border border-white rounded-full w-full max-w-[1080px] h-14 sm:h-16 flex items-center justify-between px-4 sm:px-6 transition-all duration-300 bg-white${scrolled ? " shadow-[0_4px_24px_rgba(0,0,0,0.18)]" : ""}`}
+      >
         
         {/* Desktop Brand Logo */}
         <button
@@ -51,7 +68,7 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             viewBox="0 0 24 32"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="h-7 w-auto text-white dark:text-black"
+            className="h-7 w-auto text-black"
           >
             <g clipPath="url(#clip0_485_9601)">
               <path
@@ -113,7 +130,7 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             <button
               key={cat.id}
               onClick={() => scrollTo(cat.id)}
-              className="text-white dark:text-[#030712] text-[13px] hover:text-[#ff572d] transition-colors uppercase"
+              className="text-[#030712] text-[13px] hover:text-[#ff572d] transition-colors uppercase"
               style={{ ...CD, fontWeight: 500 }}
             >
               {cat.label}
@@ -130,7 +147,7 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
           >
             <span className="hidden sm:inline">Cart</span>
-            <ShoppingCart size={13} />
+            <ShoppingCart size={13} weight="bold" />
             {cartCount > 0 && (
               <span className="absolute -top-1.5 -right-1.5 bg-[#262626] text-white rounded-full min-w-[18px] h-[18px] flex items-center justify-center text-[10px] px-1 font-bold">
                 {cartCount}
@@ -141,13 +158,13 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
           {/* Theme switcher — desktop view only */}
           <button
             onClick={onToggleDark}
-            className="hidden md:flex items-center justify-center h-10 px-4 rounded-full transition-colors bg-white dark:bg-[#030712] hover:opacity-80"
+            className="hidden md:flex items-center justify-center h-10 px-4 rounded-full transition-colors bg-[#030712] hover:opacity-80"
             aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
             title={isDark ? "Light mode" : "Dark mode"}
           >
             {isDark
               ? <Sun size={16} className="text-[#faf4ec]" />
-              : <Moon size={16} className="text-black" />
+              : <Moon size={16} className="text-[#faf4ec]" />
             }
           </button>
 
@@ -158,8 +175,8 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             aria-label="Toggle menu"
           >
             {mobileOpen
-              ? <X size={18} className="text-white dark:text-[#030712]" />
-              : <AlignJustify size={18} className="text-white dark:text-[#030712]" />
+              ? <X size={18} className="text-[#030712]" />
+              : <List size={18} className="text-[#030712]" />
             }
           </button>
         </div>

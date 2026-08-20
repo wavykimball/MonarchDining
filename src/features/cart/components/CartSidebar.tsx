@@ -1,4 +1,4 @@
-import { X, Minus, Plus } from "lucide-react";
+import { X, Minus, Plus } from "@phosphor-icons/react";
 import { CartEntry } from "@/types";
 import { CD } from "@/constants/styles";
 import { parsePrice, formatNaira } from "@/utils/price";

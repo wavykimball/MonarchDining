@@ -31,7 +31,7 @@ export default function App() {
     // Adding the `dark` class here activates Tailwind's dark: variants site-wide
     <div className={isDark ? "dark" : ""}>
       <div className="min-h-screen relative overflow-x-hidden transition-colors duration-300 bg-white dark:bg-[#050505]">
-        {/* Floating food illustration backgrounds repeated uniformly down the page */}
+        {/* Floating food illustration backgrounds — commented out, preserved for revert
         <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
           {Array.from({ length: 10 }).map((_, i) => {
             const top = 250 + i * 600;
@@ -40,7 +40,7 @@ export default function App() {
             const img = isTomato ? imgTomato1 : imgLayer82;
             const widthClass = isTomato ? "w-24 sm:w-40" : "w-48 sm:w-80";
             const opacityClass = isTomato ? "opacity-80" : "opacity-90";
-            
+
             const transform = isTomato
               ? `translateX(${isLeft ? "-75%" : "75%"})`
               : `translateX(${isLeft ? "-65%" : "65%"}) rotate(${isLeft ? "45deg" : "-15deg"})`;
@@ -67,6 +67,7 @@ export default function App() {
             );
           })}
         </div>
+        */}
 
         <Navbar
           cartCount={cartCount}
@@ -81,7 +82,7 @@ export default function App() {
           onCart={() => setCartOpen(true)}
         />
 
-        <main className="relative z-10 max-w-[1082px] mx-auto px-4 sm:px-6 pb-20 flex flex-col gap-16 sm:gap-20">
+        <main className="relative z-10 max-w-[1082px] mx-auto px-4 sm:px-6 pb-20 mt-12 flex flex-col gap-16 sm:gap-20">
           {CATEGORIES.map((cat) => (
             <MenuSection key={cat.id} category={cat} onAdd={handleAdd} />
           ))}
