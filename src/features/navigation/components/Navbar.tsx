@@ -147,7 +147,7 @@ export function Navbar({ cartCount, onCartOpen, isDark, onToggleDark }: NavbarPr
             style={{ fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
           >
             <span className="hidden sm:inline">Cart</span>
-            <ShoppingCart size={13} weight="bold" />
+            <ShoppingCart size={14} weight="fill" />
             {cartCount > 0 && (
               <span className="absolute -top-1.5 -right-1.5 bg-[#262626] text-white rounded-full min-w-[18px] h-[18px] flex items-center justify-center text-[10px] px-1 font-bold">
                 {cartCount}

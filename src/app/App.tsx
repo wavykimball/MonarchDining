@@ -6,6 +6,7 @@ import { MenuSection } from "@/features/menu/components/MenuSection";
 import { CartSidebar } from "@/features/cart/components/CartSidebar";
 import { DeliveryBanner } from "@/components/DeliveryBanner";
 import { Footer } from "@/components/Footer";
+import { BackToTop } from "@/components/BackToTop";
 import { CATEGORIES } from "@/constants/menuData";
 import imgTomato1 from "@/imports/Desktop2/ef16c2c75d9d118fedbea1902e98a0debbd796f3.png";
 import imgLayer82 from "@/imports/Desktop2/8b795082b7999cb4df7ba1198e88badcd648ea83.png";
@@ -98,6 +99,8 @@ export default function App() {
           onUpdateQty={handleUpdateQty}
           onRemove={handleRemove}
         />
+
+        <BackToTop />
       </div>
     </div>
   );
